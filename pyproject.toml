@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "s3-account-search"
+version = "0.1.0"
+description = "Search for the AWS Account that contains an S3 bucket or object"
+authors = ["Ben Bridts"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+boto3 = "^1.16.49"
+aws-assume-role-lib = "^1.3.0"
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+s3-account-finder = 's3_account_search.cli:run'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
