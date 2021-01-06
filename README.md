@@ -10,11 +10,11 @@ Additionally, you will need a role that you can assume with (one of) these permi
 you're examining
 
 ## Installation
-Until this is published to pypi, you will need to use `poetry` to install this.
-
-1. Clone this repository
-2. Run `poetry install`
-3. Activate the virtualenvironment with `poetry shell` (you can also use `poetry run $command`)
+This package is available on pypi, you can for example use on of these commands (pipx is recommended)
+```shell
+pipx install s3-account-search
+pip install s3-account-search
+```
 
 ## Usage Examples
 ```shell
@@ -44,7 +44,14 @@ discovering it one digit at a time.
    incrementing until our request is allowed, and we find the first digit
 3. We repeat this process for every digit. Using the already discovered digits as a prefix. E.g. if 
    the first digit was `8`, we test account ids starting with `80`, `81`, `82`, etc.
-   
+
+## Development
+We use poetry to manage this project
+
+1. Clone this repository
+2. Run `poetry install`
+3. Activate the virtualenvironment with `poetry shell` (you can also use `poetry run $command`)
+
 
 ## Possible improvements
 - Instead of checking one digit at a time, we could use a binary search-like algorithm. Eg. the

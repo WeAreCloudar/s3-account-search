@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "s3-account-search"
-version = "0.1.0"
+version = "0.1.1"
 description = "Search for the AWS Account that contains an S3 bucket or object"
 authors = ["Ben Bridts"]
 
