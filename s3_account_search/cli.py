@@ -25,7 +25,7 @@ def run():
 
     # try accessing the bucket without any restrictions
     if not can_access_with_policy(session, bucket, key, role_arn, {}):
-        print(f"f{role_arn} cannot access {bucket}", file=sys.stderr)
+        print(f"{role_arn} cannot access {bucket}", file=sys.stderr)
         exit(1)
 
     print("Starting search (this can take a while)")
