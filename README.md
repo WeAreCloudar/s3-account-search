@@ -54,6 +54,13 @@ We use poetry to manage this project
 2. Run `poetry install`
 3. Activate the virtualenvironment with `poetry shell` (you can also use `poetry run $command`)
 
+### Releasing a new version to pypi
+1. Edit pyproject.toml to update the version number
+2. Commit the version number bump
+3. Run `poetry publish --build`
+4. Push to GitHub
+5. Create a new release in GitHub
+
 
 ## Possible improvements
 - Instead of checking one digit at a time, we could use a binary search-like algorithm. Eg. the
