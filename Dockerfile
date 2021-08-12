@@ -1,9 +1,10 @@
 # distroless is debian based and has python 3.7.3
-# 3-alpine is 3.9.6
-FROM python:3.7-alpine AS build
+FROM python:3.7-slim-buster AS build
 ARG POETRY_VERSION=1.1.7
 #ARG POETRY_HASH=d9ece46b4874e93e1464025891d14c83d75420feec8621a680be14376e77198b
-RUN apk add --no-cache build-base libffi-dev rust cargo openssl-dev && \
+SHELL ["/bin/bash", "-o", "pipefail", "-o", "errexit", "-o", "nounset", "-c"]
+RUN apt-get update && \
+    apt-get install --no-install-suggests --no-install-recommends --yes wget && \
     wget -O - https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python - && \
     python -m venv /venv && \
     /venv/bin/pip install --upgrade pip
@@ -13,7 +14,7 @@ FROM build as build-venv
 ADD . /app
 WORKDIR /app
 RUN /root/.local/bin/poetry export | /venv/bin/pip install -r /dev/stdin && \
-    # distroless has /usr/bin/python, and python:3-alpine has /usr/local/bin/python
+    # distroless has /usr/bin/python, and python:3-slim-buster has /usr/local/bin/python
     ln -sf /usr/bin/python /venv/bin/python
 
 # To debug, use `debug` tag, which has busybox to debug issues
