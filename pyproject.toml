@@ -12,6 +12,7 @@ aws-assume-role-lib = "^1.3.0"
 
 [tool.poetry.scripts]
 s3-account-finder = 's3_account_search.cli:run'
+s3-account-search = 's3_account_search.cli:run'
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
