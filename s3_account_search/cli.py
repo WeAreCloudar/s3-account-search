@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import sys
 from argparse import ArgumentParser
-from typing import Tuple, Optional
+from typing import Optional, Tuple
 
 import boto3 as boto3
 from aws_assume_role_lib import assume_role
