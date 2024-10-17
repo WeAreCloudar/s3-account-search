@@ -9,7 +9,7 @@ For this to work you need to have at least one of these permissions:
 Additionally, you will need a role that you can assume with (one of) these permissions on the bucket 
 you're examining
 
-Some more background can be found on the [Cloudar Blog](https://www.cloudar.be/awsblog/finding-the-accountid-of-any-public-s3-bucket/)
+Some more background can be found on the [Cloudar Blog](https://cloudar.be/awsblog/finding-the-account-id-of-any-public-s3-bucket/)
 
 ## Installation
 This package is available on pypi, you can for example use on of these commands (pipx is recommended)
