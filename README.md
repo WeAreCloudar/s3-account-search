@@ -1,5 +1,5 @@
 # S3 Account Search
-This tool lets you find the account id an S3 bucket belongs too.
+This tool lets you find the account id an S3 bucket belongs to.
 
 For this to work you need to have at least one of these permissions:
 
